@@ -27,7 +27,7 @@
         }*/
 
         //Multiplication Table
-        var rows = prompt("How many rows for your multiplication table?");
+       /*ar rows = prompt("How many rows for your multiplication table?");
         var cols = prompt("How many columns for your multiplication table?");
         if (rows == "" || rows == null)
             rows = 10;
@@ -48,13 +48,30 @@
             }
             output = output + "</table>";
             document.write(output);
+        }*/
+
+        //Event handling
+        function trigger() {
+            document.getElementById("hover").addEventListener("mouseover", popup);
+            function popup() {
+                alert("welcome to my Webpage!!!");
+            }
         }
     </script>
+    <style>
+        p{
+            font-size:50px;
+            position:fixed;
+            left:550px;
+            top:300px;
+        }
+    </style>
 </head>
-<body>
+<body onload ="trigger();">
+    <p id="hover">Welcome!!!</p>
     <script>
-        var input = prompt("Input your Number");
-        document.write(addNumbers(input));
+      //var input = prompt("Input your Number");
+      //document.write(addNumbers(input));
     </script>
     <div>Content goes here!</div>
     <script src="js/main.js"></script>
